@@ -1,10 +1,9 @@
 import "./AppHeader.css";
 
-function AppHeader({ user }) {
-  console.log(user.folder?.name);
-  const userName = user.folder?.name;
-  const userOwner = user.folder?.owner.name;
-  const userProfile = user.folder?.owner.profileImageSource;
+function AppHeader({ folderInfo }) {
+  const userName = folderInfo.folder?.name;
+  const userOwner = folderInfo.folder?.owner.name;
+  const userProfile = folderInfo.folder?.owner.profileImageSource;
 
   return (
     <div className="appHeader">

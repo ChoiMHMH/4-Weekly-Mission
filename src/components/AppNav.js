@@ -1,7 +1,8 @@
 import "./AppNav";
 import imgLogo from "../images/logo.png";
 
-function AppNav() {
+function AppNav({ userInfo }) {
+  console.log(userInfo.length);
   return (
     <nav>
       <div className="gnb">
@@ -12,9 +13,13 @@ function AppNav() {
             alt="홈으로 연결된 Linkbrary 로고"
           />
         </a>
-        <a className="cta cta-short" href="#">
-          <span>로그인</span>
-        </a>
+        {userInfo.length === 0 ? (
+          <a className="cta cta-short" href="#">
+            <span>로그인</span>
+          </a>
+        ) : (
+          <div>실행</div>
+        )}
       </div>
     </nav>
   );

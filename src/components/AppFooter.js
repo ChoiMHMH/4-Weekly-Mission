@@ -4,7 +4,6 @@ import instagram from "../images/instagram.svg";
 import facebook from "../images/facebook.svg";
 
 function AppFooter() {
-  /*수정: a태그 link였나 검색해서 바꾸기*/
   return (
     <footer>
       <div class="footer-box">

@@ -4,11 +4,12 @@ import { getFolder as getFolder, getUser } from "../api.js";
 import AppNav from "./AppNav.js";
 import AppFooter from "./AppFooter.js";
 import AppHeader from "./AppHeader.js";
+import { SearchBar } from "./SearchBar.js";
 
 function App() {
   const [folderInfo, setFolderInfo] = useState([]);
   const [userInfo, setUserInfo] = useState([]);
-  //const [createdAtInfo,setCreatedAtInfo] = useState([]);
+  const [createdAtInfo, setCreatedAtInfo] = useState([]);
 
   async function handleFolderInfo() {
     let result;
@@ -37,6 +38,7 @@ function App() {
     <div className="App">
       <AppNav userInfo={userInfo} />
       <AppHeader folderInfo={folderInfo} />
+      <SearchBar />
 
       <AppFooter />
     </div>

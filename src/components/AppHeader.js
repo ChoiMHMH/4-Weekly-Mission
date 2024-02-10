@@ -1,11 +1,16 @@
-import avatarImg from "./images/Avatar.png";
-function AppHeader() {
+import "./AppHeader.css";
+
+function AppHeader({ user }) {
+  console.log(user.folder?.name);
+  const userName = user.folder?.name;
+  const userOwner = user.folder?.owner.name;
+  const userProfile = user.folder?.owner.profileImageSource;
+
   return (
-    //fixme: 추후 코드잇을 받아온 로그인 닉네임이 보이게 교체
     <div className="appHeader">
-      <img src={avatarImg}></img>
-      <p>@코드잇</p>
-      <h2>즐겨찾기</h2>
+      <img src={userProfile}></img>
+      <p>@{userOwner}</p>
+      <h2>{userName}</h2>
     </div>
   );
 }

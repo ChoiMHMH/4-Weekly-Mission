@@ -1,12 +1,13 @@
 import "./App.css";
+import React, { useState, useEffect } from "react";
+import { getData } from "../api.js";
+import AppNav from "./AppNav.js";
 import AppFooter from "./AppFooter.js";
 import AppHeader from "./AppHeader.js";
-import Nav from "./AppNav.js";
-import React, { useState, useEffect } from "react";
-import { getData } from "./api.js";
 
 function App() {
   const [user, setUser] = useState([]);
+  const [userInfo, setUserInfo] = useState([]);
 
   async function handleLoadUser() {
     let result;
@@ -20,8 +21,9 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
-      <AppHeader />
+      <AppNav />
+
+      <AppHeader user={user} />
 
       <AppFooter />
     </div>

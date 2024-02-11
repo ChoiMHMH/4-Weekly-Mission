@@ -5,11 +5,11 @@ import AppNav from "./AppNav.js";
 import AppFooter from "./AppFooter.js";
 import AppHeader from "./AppHeader.js";
 import { SearchBar } from "./SearchBar.js";
+import Card from "./Cards.js";
 
 function App() {
   const [folderInfo, setFolderInfo] = useState([]);
   const [userInfo, setUserInfo] = useState([]);
-  const [createdAtInfo, setCreatedAtInfo] = useState([]);
 
   async function handleFolderInfo() {
     let result;
@@ -39,7 +39,7 @@ function App() {
       <AppNav userInfo={userInfo} />
       <AppHeader folderInfo={folderInfo} />
       <SearchBar />
-
+      <Card />
       <AppFooter />
     </div>
   );

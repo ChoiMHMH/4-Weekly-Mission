@@ -1,8 +1,8 @@
-import "./AppNav";
+import "./AppNav.css";
 import imgLogo from "../images/logo.png";
+import profile from "../images/myprofile.png";
 
 function AppNav({ userInfo }) {
-  console.log(userInfo.id);
   return (
     <nav>
       <div className="gnb">
@@ -18,7 +18,10 @@ function AppNav({ userInfo }) {
             <span>로그인</span>
           </a>
         ) : (
-          <div>실행</div>
+          <div className="userInfo">
+            <img src={userInfo.profileImageSource}></img>
+            <p>{userInfo.email}</p>
+          </div>
         )}
       </div>
     </nav>

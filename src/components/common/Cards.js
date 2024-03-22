@@ -34,7 +34,7 @@ function Card() {
           //fixme: key값 id값으로 고치기
           <div className="card">
             <a href={url} key={index}>
-              <img
+              <img 
                 className="card-img"
                 src={imageSource ? imageSource : noImg}
                 alt="card"

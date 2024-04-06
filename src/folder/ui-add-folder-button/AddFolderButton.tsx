@@ -1,6 +1,10 @@
 import styles from "./AddFolderButton.module.scss";
 import classNames from "classnames/bind";
+<<<<<<< HEAD
 import AddIcon from "./add.svg";
+=======
+import { ReactComponent as AddIcon } from "./add.svg";
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 import { MouseEventHandler } from "react";
 
 const cx = classNames.bind(styles);

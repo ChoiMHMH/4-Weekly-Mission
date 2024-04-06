@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Cta } from "@/src/sharing/ui-cta";
+=======
+import { Cta } from "sharing/ui-cta";
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 import styles from "./LinkForm.module.scss";
 import classNames from "classnames/bind";
 import { ChangeEventHandler, FormEvent, FormEventHandler, forwardRef } from "react";

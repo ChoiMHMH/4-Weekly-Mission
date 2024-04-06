@@ -1,5 +1,6 @@
 import styles from "./ShareModal.module.scss";
 import classNames from "classnames/bind";
+<<<<<<< HEAD
 import { Modal } from "@/src/sharing/ui-modal";
 import { ModalContentBox } from "@/src/sharing/ui-modal-content-box";
 import { ModalContentDescription } from "@/src/sharing/ui-modal-content-description";
@@ -7,6 +8,15 @@ import { ModalContentTitle } from "@/src/sharing/ui-modal-content-title";
 import KakaoIcon from "./kakao.svg";
 import FacebookIcon from "./facebook.svg";
 import LinkIcon from "./link.svg";
+=======
+import { Modal } from "sharing/ui-modal";
+import { ModalContentBox } from "sharing/ui-modal-content-box";
+import { ModalContentDescription } from "sharing/ui-modal-content-description";
+import { ModalContentTitle } from "sharing/ui-modal-content-title";
+import { ReactComponent as KakaoIcon } from "./kakao.svg";
+import { ReactComponent as FacebookIcon } from "./facebook.svg";
+import { ReactComponent as LinkIcon } from "./link.svg";
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 import { KeyboardEventHandler, MouseEventHandler } from "react";
 
 const cx = classNames.bind(styles);

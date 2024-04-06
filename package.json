@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^1.6.2",
     "classnames": "^2.3.2",
     "date-fns": "^2.30.0",
@@ -18,12 +19,26 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
+=======
+    "axios": "^1.6.8",
+    "classnames": "^2.5.1",
+    "date-fns": "^3.6.0",
+    "next": "^14.1.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.72.0"
+  },
+  "devDependencies": {
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "13.5.6",
+<<<<<<< HEAD
     "sass": "^1.69.5",
+=======
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
     "typescript": "^5"
   }
 }

@@ -1,14 +1,20 @@
+<<<<<<< HEAD
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
+=======
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
+<<<<<<< HEAD
       <Head>
         <title>Linkbrary</title>
       </Head>
@@ -51,6 +57,9 @@ export default function Home() {
         </h1>
       </Link>
       <main></main>
+=======
+      <h1>홈페이지입니다</h1>
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
     </>
   );
 }

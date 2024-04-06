@@ -1,10 +1,19 @@
 import { useCallback, useEffect } from "react";
+<<<<<<< HEAD
 import { axiosInstance } from "@/src/sharing/util";
 import { mapLinksData } from "@/src/link/util-map/mapLinksData";
 import { useAsync } from "@/src/sharing/util";
 import { ALL_LINKS_ID } from "./constant";
 import { SelectedFolderId } from "@/src/folder/type";
 import { LinkRawData } from "@/src/link/type";
+=======
+import { axiosInstance } from "sharing/util";
+import { mapLinksData } from "link/util-map/mapLinksData";
+import { useAsync } from "sharing/util";
+import { ALL_LINKS_ID } from "./constant";
+import { SelectedFolderId } from "folder/type";
+import { LinkRawData } from "link/type";
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 
 export const useGetLinks = (folderId: SelectedFolderId = ALL_LINKS_ID) => {
   const queryString = folderId === ALL_LINKS_ID ? "" : `?folderId=${folderId}`;

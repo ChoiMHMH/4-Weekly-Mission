@@ -1,11 +1,19 @@
 import styles from "./AlertModal.module.scss";
 import classNames from "classnames/bind";
 import { KeyboardEventHandler, MouseEventHandler } from "react";
+<<<<<<< HEAD
 import { Modal } from "@/src/sharing/ui-modal";
 import { ModalContentBox } from "@/src/sharing/ui-modal-content-box";
 import { ModalContentButton } from "@/src/sharing/ui-modal-content-button";
 import { ModalContentDescription } from "@/src/sharing/ui-modal-content-description";
 import { ModalContentTitle } from "@/src/sharing/ui-modal-content-title";
+=======
+import { Modal } from "sharing/ui-modal";
+import { ModalContentBox } from "sharing/ui-modal-content-box";
+import { ModalContentButton } from "sharing/ui-modal-content-button";
+import { ModalContentDescription } from "sharing/ui-modal-content-description";
+import { ModalContentTitle } from "sharing/ui-modal-content-title";
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 
 const cx = classNames.bind(styles);
 

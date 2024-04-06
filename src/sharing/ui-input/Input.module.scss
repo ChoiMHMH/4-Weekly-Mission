@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "@/styles/global.scss";
 
 .container {
@@ -6,6 +7,9 @@
   flex-direction: column;
   row-gap: 0.6rem;
 }
+=======
+@import "sharing/styles/global.scss";
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 
 .input {
   width: 100%;
@@ -23,6 +27,7 @@
   &:focus {
     border-color: $color-primary;
   }
+<<<<<<< HEAD
 
   &.error {
     border-color: $color-red;
@@ -35,4 +40,6 @@
   &.error {
     color: $color-red;
   }
+=======
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 }

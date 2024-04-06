@@ -1,5 +1,6 @@
 import styles from "./FolderToolBar.module.scss";
 import classNames from "classnames/bind";
+<<<<<<< HEAD
 import { AddFolderButton } from "@/src/folder/ui-add-folder-button";
 import { FolderButton } from "@/src/folder/ui-folder-button";
 import { IconAndTextButton } from "@/src/sharing/ui-icon-and-text-button";
@@ -12,6 +13,24 @@ import { AlertModal } from "@/src/sharing/ui-alert-modal";
 import { Folder, SelectedFolderId } from "@/src/folder/type";
 import { copyToClipboard, useKakaoSdk } from "@/src/sharing/util";
 import { useRouter } from "next/router";
+=======
+import { AddFolderButton } from "folder/ui-add-folder-button";
+import { FolderButton } from "folder/ui-folder-button";
+import { IconAndTextButton } from "sharing/ui-icon-and-text-button";
+import {
+  ALL_LINKS_TEXT,
+  BUTTONS,
+  KAKAO_SHARE_DATA,
+  MODALS_ID,
+} from "./constant";
+import { ALL_LINKS_ID } from "link/data-access-link/constant";
+import { KeyboardEvent, useState } from "react";
+import { ShareModal } from "folder/ui-share-modal";
+import { InputModal } from "sharing/ui-input-modal";
+import { AlertModal } from "sharing/ui-alert-modal";
+import { Folder, SelectedFolderId } from "folder/type";
+import { copyToClipboard, useKakaoSdk } from "sharing/util";
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 
 const cx = classNames.bind(styles);
 
@@ -21,18 +40,34 @@ type FolderToolBarProps = {
   onFolderClick: (folderId: SelectedFolderId) => void;
 };
 
+<<<<<<< HEAD
 export const FolderToolBar = ({ folders, selectedFolderId, onFolderClick }: FolderToolBarProps) => {
   const { shareKakao } = useKakaoSdk();
   const [currentModal, setCurrentModal] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState<string>("");
   const router = useRouter();
+=======
+export const FolderToolBar = ({
+  folders,
+  selectedFolderId,
+  onFolderClick,
+}: FolderToolBarProps) => {
+  const { shareKakao } = useKakaoSdk();
+  const [currentModal, setCurrentModal] = useState<string | null>(null);
+  const [inputValue, setInputValue] = useState<string>("");
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 
   const folderName =
     ALL_LINKS_ID === selectedFolderId
       ? ALL_LINKS_TEXT
       : folders?.find(({ id }) => id === selectedFolderId)?.name ?? "";
+<<<<<<< HEAD
 
   const getShareLink = () => `${window.location.origin}/shared?user=1&folder=${selectedFolderId}`;
+=======
+  const shareLink = `${window.location.origin}/shared?user=1&folder=${selectedFolderId}`;
+
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
   const closeModal = () => setCurrentModal(null);
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.key === "Escape") {
@@ -40,11 +75,19 @@ export const FolderToolBar = ({ folders, selectedFolderId, onFolderClick }: Fold
     }
   };
   const handleKakaoClick = () => {
+<<<<<<< HEAD
     shareKakao({ url: getShareLink(), ...KAKAO_SHARE_DATA });
   };
   const handleFacebookClick = () =>
     window?.open(`http://www.facebook.com/sharer.php?u=${getShareLink()}`);
   const handleLinkCopyClick = () => copyToClipboard(getShareLink());
+=======
+    shareKakao({ url: shareLink, ...KAKAO_SHARE_DATA });
+  };
+  const handleFacebookClick = () =>
+    window.open(`http://www.facebook.com/sharer.php?u=${shareLink}`);
+  const handleLinkCopyClick = () => copyToClipboard(shareLink);
+>>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 
   return (
     <div className={cx("container")}>

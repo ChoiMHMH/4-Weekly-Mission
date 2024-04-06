@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useGetFolders } from "@/src/folder/data-access-folder";
 import { AddLinkModal } from "@/src/link/ui-add-link-modal";
 import { EditableCard } from "@/src/link/ui-editable-card";
@@ -8,17 +7,6 @@ import { CardList as UiCardList } from "@/src/link/ui-card-list";
 import { AlertModal } from "@/src/sharing/ui-alert-modal";
 import { MODALS_ID } from "./constant";
 import { Link } from "@/src/link/type";
-=======
-import { useGetFolders } from "folder/data-access-folder";
-import { AddLinkModal } from "link/ui-add-link-modal";
-import { EditableCard } from "link/ui-editable-card";
-import { NoLink } from "link/ui-no-link";
-import { KeyboardEventHandler, useCallback, useRef, useState } from "react";
-import { CardList as UiCardList } from "link/ui-card-list";
-import { AlertModal } from "sharing/ui-alert-modal";
-import { MODALS_ID } from "./constant";
-import { Link } from "link/type";
->>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 
 type CardListProps = {
   links: Link[];

@@ -2,11 +2,7 @@ import styles from "./SearchBar.module.scss";
 import classNames from "classnames/bind";
 import { SEARCH_IMAGE } from "./constant";
 import { ChangeEventHandler, MouseEventHandler } from "react";
-<<<<<<< HEAD
 import CloseIcon from "./close.svg";
-=======
-import { ReactComponent as CloseIcon } from "./close.svg";
->>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 
 const cx = classNames.bind(styles);
 

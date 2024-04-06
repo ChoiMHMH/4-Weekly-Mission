@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { Link } from "@/src/link/type";
-=======
-import { Link } from "link/type";
->>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 import { ChangeEventHandler, MouseEventHandler, useState } from "react";
 
 export const useSearchLink = (links: Link[]) => {

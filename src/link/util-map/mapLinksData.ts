@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import format from "date-fns/format";
 import { getElapsedTime } from "@/src/sharing/util";
-=======
-import { format } from "date-fns";
-import { getElapsedTime } from "sharing/util";
->>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 
 export const mapLinksData = (link: {
   id: number;

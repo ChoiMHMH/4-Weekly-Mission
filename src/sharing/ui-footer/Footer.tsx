@@ -1,10 +1,6 @@
 import styles from "./Footer.module.scss";
 import classNames from "classnames/bind";
-<<<<<<< HEAD
 import { ROUTE } from "@/src/sharing/util";
-=======
-import { ROUTE } from "sharing/util";
->>>>>>> 50171e98d424c44bb3c59d272d8e6e0538e98aee
 import { TEXT } from "./constant";
 import { forwardRef } from "react";
 

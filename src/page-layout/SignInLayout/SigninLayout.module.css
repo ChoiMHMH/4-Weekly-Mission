@@ -110,16 +110,16 @@
 }
 
 .error-message {
-  display: none;
+  /* display: none; */
   margin-top: -0.4rem;
   font-size: 1.4rem;
   font-weight: 400;
   color: #ff5b56;
 }
 
-.error-message.error-message-on {
+/* .error-message.error-message-on {
   display: inline-block;
-}
+} */
 
 .eye-button {
   position: absolute;
@@ -181,4 +181,8 @@
 .kakao-link {
   padding-top: 0.2rem;
   background-color: #f5e14b;
+}
+.cta:disabled {
+  background-image: linear-gradient(135deg, #807eee 0%, #408999 100%);
+  cursor: not-allowed;
 }

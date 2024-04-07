@@ -1,3 +1,4 @@
+"use client";
 import { Link } from "@/src/link/type";
 import { ChangeEventHandler, MouseEventHandler, useState } from "react";
 

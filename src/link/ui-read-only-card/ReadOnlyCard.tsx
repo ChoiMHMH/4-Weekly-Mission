@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import { Card } from "@/src/sharing/ui-card";
 import { CardContent } from "@/src/sharing/ui-card-content";

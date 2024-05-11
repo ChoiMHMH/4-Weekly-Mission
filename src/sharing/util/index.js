@@ -1,4 +1,3 @@
-"use client";
 export * from "./axiosInstance";
 export * from "./constant";
 export * from "./getElapsedTime";

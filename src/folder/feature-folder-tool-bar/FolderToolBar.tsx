@@ -1,49 +1,35 @@
-"use client";
 import styles from "./FolderToolBar.module.scss";
 import classNames from "classnames/bind";
 import { AddFolderButton } from "@/src/folder/ui-add-folder-button";
 import { FolderButton } from "@/src/folder/ui-folder-button";
 import { IconAndTextButton } from "@/src/sharing/ui-icon-and-text-button";
-import {
-  ALL_LINKS_TEXT,
-  BUTTONS,
-  KAKAO_SHARE_DATA,
-  MODALS_ID,
-} from "./constant";
+import { ALL_LINKS_TEXT, BUTTONS, KAKAO_SHARE_DATA, MODALS_ID } from "./constant";
 import { ALL_LINKS_ID } from "@/src/link/data-access-link/constant";
 import { KeyboardEvent, useState } from "react";
 import { ShareModal } from "@/src/folder/ui-share-modal";
 import { InputModal } from "@/src/sharing/ui-input-modal";
 import { AlertModal } from "@/src/sharing/ui-alert-modal";
 import { Folder, SelectedFolderId } from "@/src/folder/type";
-import { copyToClipboard, useKakaoSdk } from "@/src/sharing/util";
-import { useRouter } from "next/navigation";
+import { ROUTE, copyToClipboard, useKakaoSdk } from "@/src/sharing/util";
 
 const cx = classNames.bind(styles);
 
 type FolderToolBarProps = {
   folders: Folder[];
-  selectedFolderId: SelectedFolderId;
-  onFolderClick: (folderId: SelectedFolderId) => void;
+  selectedFolderId?: SelectedFolderId;
 };
 
-export const FolderToolBar = ({
-  folders,
-  selectedFolderId,
-  onFolderClick,
-}: FolderToolBarProps) => {
+export const FolderToolBar = ({ folders, selectedFolderId }: FolderToolBarProps) => {
   const { shareKakao } = useKakaoSdk();
   const [currentModal, setCurrentModal] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState<string>("");
-  const router = useRouter();
 
   const folderName =
     ALL_LINKS_ID === selectedFolderId
       ? ALL_LINKS_TEXT
       : folders?.find(({ id }) => id === selectedFolderId)?.name ?? "";
 
-  const getShareLink = () =>
-    `${window.location.origin}/shared?user=1&folder=${selectedFolderId}`;
+  const getShareLink = () => `${window.location.origin}/shared?user=1&folder=${selectedFolderId}`;
   const closeModal = () => setCurrentModal(null);
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.key === "Escape") {
@@ -63,14 +49,14 @@ export const FolderToolBar = ({
         <FolderButton
           key={ALL_LINKS_ID}
           text={ALL_LINKS_TEXT}
-          onClick={() => onFolderClick(ALL_LINKS_ID)}
+          href={ROUTE.폴더}
           isSelected={ALL_LINKS_ID === selectedFolderId}
         />
         {folders?.map(({ id, name }) => (
           <FolderButton
             key={id}
             text={name}
-            onClick={() => onFolderClick(id)}
+            href={`${ROUTE.폴더}/${id}`}
             isSelected={id === selectedFolderId}
           />
         ))}
